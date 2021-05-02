@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CatCollectionViewCell" customModule="TheCatIKnow" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="252" height="202"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="252" height="202"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WCx-Ur-KIU">
+                        <rect key="frame" x="0.0" y="0.0" width="252" height="202"/>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hk2-PI-8rp">
+                        <rect key="frame" x="0.0" y="0.0" width="252" height="202"/>
+                    </button>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="favorite" translatesAutoresizingMaskIntoConstraints="NO" id="ASr-7V-kd5">
+                        <rect key="frame" x="208" y="158" width="36" height="36"/>
+                        <color key="tintColor" systemColor="systemGreenColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="36" id="GG4-9o-8eS"/>
+                            <constraint firstAttribute="height" constant="36" id="Vyk-AT-JyZ"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BCR-gZ-vux">
+                        <rect key="frame" x="8" y="8" width="236" height="18"/>
+                        <color key="backgroundColor" red="0.66799789669999998" green="0.47512125970000002" blue="0.25860109930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="BCR-gZ-vux" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="9a9-Cg-MTk"/>
+                <constraint firstItem="Hk2-PI-8rp" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="AbE-fW-tmV"/>
+                <constraint firstItem="WCx-Ur-KIU" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Fau-Ok-8F7"/>
+                <constraint firstAttribute="trailing" secondItem="ASr-7V-kd5" secondAttribute="trailing" constant="8" id="MdE-7t-yzW"/>
+                <constraint firstItem="BCR-gZ-vux" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="ZES-Gh-zau"/>
+                <constraint firstAttribute="trailing" secondItem="Hk2-PI-8rp" secondAttribute="trailing" id="axX-MY-inW"/>
+                <constraint firstItem="Hk2-PI-8rp" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="cLo-2y-t4c"/>
+                <constraint firstAttribute="trailing" secondItem="BCR-gZ-vux" secondAttribute="trailing" constant="8" id="fRb-nB-ImY"/>
+                <constraint firstAttribute="bottom" secondItem="ASr-7V-kd5" secondAttribute="bottom" constant="8" id="iXs-5z-fHv"/>
+                <constraint firstItem="WCx-Ur-KIU" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="lLe-Lk-Zro"/>
+                <constraint firstAttribute="bottom" secondItem="Hk2-PI-8rp" secondAttribute="bottom" id="rHi-Of-k2e"/>
+                <constraint firstAttribute="bottom" secondItem="WCx-Ur-KIU" secondAttribute="bottom" id="uP5-DJ-3GQ"/>
+                <constraint firstAttribute="trailing" secondItem="WCx-Ur-KIU" secondAttribute="trailing" id="yey-tg-ymo"/>
+            </constraints>
+            <size key="customSize" width="252" height="202"/>
+            <connections>
+                <outlet property="backgroundButton" destination="Hk2-PI-8rp" id="21Z-Hi-muq"/>
+                <outlet property="catBreedLabel" destination="BCR-gZ-vux" id="5i9-R9-9ch"/>
+                <outlet property="catImageView" destination="WCx-Ur-KIU" id="iTB-Nc-i06"/>
+                <outlet property="favoriteImageView" destination="ASr-7V-kd5" id="tOZ-a8-1Qa"/>
+            </connections>
+            <point key="canvasLocation" x="282.60869565217394" y="204.24107142857142"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="favorite" width="24" height="24"/>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

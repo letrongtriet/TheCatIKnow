@@ -3,27 +3,105 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		0F3028C0263D14C900135A44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3028BF263D14C900135A44 /* AppDelegate.swift */; };
-		0F3028C2263D14C900135A44 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3028C1263D14C900135A44 /* SceneDelegate.swift */; };
-		0F3028C4263D14C900135A44 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3028C3263D14C900135A44 /* ViewController.swift */; };
-		0F3028C7263D14C900135A44 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F3028C5263D14C900135A44 /* Main.storyboard */; };
 		0F3028C9263D14CA00135A44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F3028C8263D14CA00135A44 /* Assets.xcassets */; };
 		0F3028CC263D14CA00135A44 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F3028CA263D14CA00135A44 /* LaunchScreen.storyboard */; };
+		0F3028D7263D154F00135A44 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3028D4263D154F00135A44 /* AppCoordinator.swift */; };
+		0F3028D8263D154F00135A44 /* RootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3028D5263D154F00135A44 /* RootCoordinator.swift */; };
+		0F3028D9263D154F00135A44 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3028D6263D154F00135A44 /* Coordinator.swift */; };
+		0F3028DD263D15A900135A44 /* APIImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3028DB263D15A900135A44 /* APIImplementation.swift */; };
+		0F3028DE263D15A900135A44 /* APIDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3028DC263D15A900135A44 /* APIDefinition.swift */; };
+		0F3028E2263D15B300135A44 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3028E0263D15B300135A44 /* NetworkManager.swift */; };
+		0F3028E8263D15E900135A44 /* NetworkDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3028E5263D15E900135A44 /* NetworkDefinition.swift */; };
+		0F3028E9263D15E900135A44 /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3028E6263D15E900135A44 /* Identifiable.swift */; };
+		0F3028EE263D160900135A44 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3028EC263D160900135A44 /* UIView+Extension.swift */; };
+		0F3028EF263D160900135A44 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3028ED263D160900135A44 /* UITableView+Extension.swift */; };
+		0F3028F2263D164F00135A44 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 0F3028F1263D164F00135A44 /* SDWebImage */; };
+		0F3028F4263D164F00135A44 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0F3028F3263D164F00135A44 /* SDWebImageMapKit */; };
+		0F3028F7263D173B00135A44 /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3028F6263D173B00135A44 /* Favorite.swift */; };
+		0F3028F9263D17A700135A44 /* Breed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3028F8263D17A700135A44 /* Breed.swift */; };
+		0F3028FB263D17F600135A44 /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3028FA263D17F600135A44 /* Cat.swift */; };
+		0F3028FD263D19CA00135A44 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3028FC263D19CA00135A44 /* Constants.swift */; };
+		0F3028FF263D21F600135A44 /* UploadCatResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3028FE263D21F600135A44 /* UploadCatResponse.swift */; };
+		0F302901263D22B300135A44 /* FavoriteCatResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F302900263D22B300135A44 /* FavoriteCatResponse.swift */; };
+		0F302903263D232800135A44 /* UnFavoriteCatResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F302902263D232800135A44 /* UnFavoriteCatResponse.swift */; };
+		0F302908263D245000135A44 /* FavoriteCatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F302906263D245000135A44 /* FavoriteCatViewController.swift */; };
+		0F302909263D245000135A44 /* FavoriteCatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F302907263D245000135A44 /* FavoriteCatViewController.xib */; };
+		0F30290F263D247700135A44 /* CatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F30290D263D247700135A44 /* CatViewController.swift */; };
+		0F302910263D247700135A44 /* CatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F30290E263D247700135A44 /* CatViewController.xib */; };
+		0F302913263D248200135A44 /* UploadCatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F302911263D248200135A44 /* UploadCatViewController.swift */; };
+		0F302914263D248200135A44 /* UploadCatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F302912263D248200135A44 /* UploadCatViewController.xib */; };
+		0F302917263D248C00135A44 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F302915263D248C00135A44 /* HomeViewController.swift */; };
+		0F302918263D248C00135A44 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F302916263D248C00135A44 /* HomeViewController.xib */; };
+		0F30291A263D25DB00135A44 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F302919263D25DB00135A44 /* Configuration.swift */; };
+		0F30291C263D260000135A44 /* CatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F30291B263D260000135A44 /* CatViewModel.swift */; };
+		0F30291E263D260B00135A44 /* FavoriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F30291D263D260B00135A44 /* FavoriteViewModel.swift */; };
+		0F302920263D262500135A44 /* UploadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F30291F263D262500135A44 /* UploadViewModel.swift */; };
+		0F302922263D276A00135A44 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F302921263D276A00135A44 /* UIViewController+Extension.swift */; };
+		0F302926263D450400135A44 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F302925263D450400135A44 /* BaseView.swift */; };
+		0F302928263D475700135A44 /* CatListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F302927263D475700135A44 /* CatListCellView.swift */; };
+		0F30292A263D479000135A44 /* CatListCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F302929263D479000135A44 /* CatListCellModel.swift */; };
+		0F30292E263D482300135A44 /* CatListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F30292C263D482300135A44 /* CatListTableViewCell.swift */; };
+		0F30292F263D482300135A44 /* CatListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F30292D263D482300135A44 /* CatListTableViewCell.xib */; };
+		0F302933263DA69600135A44 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F302932263DA69600135A44 /* UICollectionView+Extension.swift */; };
+		0F302938263DADEB00135A44 /* CatCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F302936263DADEB00135A44 /* CatCollectionViewCell.swift */; };
+		0F302939263DADEB00135A44 /* CatCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F302937263DADEB00135A44 /* CatCollectionViewCell.xib */; };
+		0F30293B263E796D00135A44 /* Data+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F30293A263E796D00135A44 /* Data+Extension.swift */; };
+		0F30293E263E7DC400135A44 /* CatDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F30293C263E7DC400135A44 /* CatDetailViewController.swift */; };
+		0F30293F263E7DC400135A44 /* CatDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F30293D263E7DC400135A44 /* CatDetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0F3028BC263D14C900135A44 /* TheCatIKnow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheCatIKnow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F3028BF263D14C900135A44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0F3028C1263D14C900135A44 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0F3028C3263D14C900135A44 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		0F3028C6263D14C900135A44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0F3028C8263D14CA00135A44 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0F3028CB263D14CA00135A44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0F3028CD263D14CA00135A44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0F3028D4263D154F00135A44 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		0F3028D5263D154F00135A44 /* RootCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootCoordinator.swift; sourceTree = "<group>"; };
+		0F3028D6263D154F00135A44 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		0F3028DB263D15A900135A44 /* APIImplementation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIImplementation.swift; sourceTree = "<group>"; };
+		0F3028DC263D15A900135A44 /* APIDefinition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIDefinition.swift; sourceTree = "<group>"; };
+		0F3028E0263D15B300135A44 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		0F3028E5263D15E900135A44 /* NetworkDefinition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkDefinition.swift; sourceTree = "<group>"; };
+		0F3028E6263D15E900135A44 /* Identifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
+		0F3028EC263D160900135A44 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		0F3028ED263D160900135A44 /* UITableView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		0F3028F6263D173B00135A44 /* Favorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorite.swift; sourceTree = "<group>"; };
+		0F3028F8263D17A700135A44 /* Breed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breed.swift; sourceTree = "<group>"; };
+		0F3028FA263D17F600135A44 /* Cat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cat.swift; sourceTree = "<group>"; };
+		0F3028FC263D19CA00135A44 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		0F3028FE263D21F600135A44 /* UploadCatResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadCatResponse.swift; sourceTree = "<group>"; };
+		0F302900263D22B300135A44 /* FavoriteCatResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCatResponse.swift; sourceTree = "<group>"; };
+		0F302902263D232800135A44 /* UnFavoriteCatResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnFavoriteCatResponse.swift; sourceTree = "<group>"; };
+		0F302906263D245000135A44 /* FavoriteCatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCatViewController.swift; sourceTree = "<group>"; };
+		0F302907263D245000135A44 /* FavoriteCatViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteCatViewController.xib; sourceTree = "<group>"; };
+		0F30290D263D247700135A44 /* CatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatViewController.swift; sourceTree = "<group>"; };
+		0F30290E263D247700135A44 /* CatViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CatViewController.xib; sourceTree = "<group>"; };
+		0F302911263D248200135A44 /* UploadCatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadCatViewController.swift; sourceTree = "<group>"; };
+		0F302912263D248200135A44 /* UploadCatViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UploadCatViewController.xib; sourceTree = "<group>"; };
+		0F302915263D248C00135A44 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		0F302916263D248C00135A44 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		0F302919263D25DB00135A44 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		0F30291B263D260000135A44 /* CatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatViewModel.swift; sourceTree = "<group>"; };
+		0F30291D263D260B00135A44 /* FavoriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewModel.swift; sourceTree = "<group>"; };
+		0F30291F263D262500135A44 /* UploadViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewModel.swift; sourceTree = "<group>"; };
+		0F302921263D276A00135A44 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		0F302925263D450400135A44 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		0F302927263D475700135A44 /* CatListCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatListCellView.swift; sourceTree = "<group>"; };
+		0F302929263D479000135A44 /* CatListCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatListCellModel.swift; sourceTree = "<group>"; };
+		0F30292C263D482300135A44 /* CatListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatListTableViewCell.swift; sourceTree = "<group>"; };
+		0F30292D263D482300135A44 /* CatListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CatListTableViewCell.xib; sourceTree = "<group>"; };
+		0F302932263DA69600135A44 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
+		0F302936263DADEB00135A44 /* CatCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatCollectionViewCell.swift; sourceTree = "<group>"; };
+		0F302937263DADEB00135A44 /* CatCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CatCollectionViewCell.xib; sourceTree = "<group>"; };
+		0F30293A263E796D00135A44 /* Data+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Extension.swift"; sourceTree = "<group>"; };
+		0F30293C263E7DC400135A44 /* CatDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatDetailViewController.swift; sourceTree = "<group>"; };
+		0F30293D263E7DC400135A44 /* CatDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CatDetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +109,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F3028F4263D164F00135A44 /* SDWebImageMapKit in Frameworks */,
+				0F3028F2263D164F00135A44 /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +136,149 @@
 		0F3028BE263D14C900135A44 /* TheCatIKnow */ = {
 			isa = PBXGroup;
 			children = (
+				0F302905263D244000135A44 /* ViewModel */,
+				0F302904263D243900135A44 /* View */,
+				0F3028F5263D172F00135A44 /* Model */,
+				0F3028EB263D160900135A44 /* Extension */,
+				0F3028E4263D15E900135A44 /* Interface */,
+				0F3028DF263D15B300135A44 /* Helper */,
+				0F3028DA263D15A900135A44 /* Network */,
+				0F3028D3263D154F00135A44 /* Coordinator */,
 				0F3028BF263D14C900135A44 /* AppDelegate.swift */,
-				0F3028C1263D14C900135A44 /* SceneDelegate.swift */,
-				0F3028C3263D14C900135A44 /* ViewController.swift */,
-				0F3028C5263D14C900135A44 /* Main.storyboard */,
 				0F3028C8263D14CA00135A44 /* Assets.xcassets */,
 				0F3028CA263D14CA00135A44 /* LaunchScreen.storyboard */,
 				0F3028CD263D14CA00135A44 /* Info.plist */,
+				0F3028FC263D19CA00135A44 /* Constants.swift */,
 			);
 			path = TheCatIKnow;
+			sourceTree = "<group>";
+		};
+		0F3028D3263D154F00135A44 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				0F3028D4263D154F00135A44 /* AppCoordinator.swift */,
+				0F3028D5263D154F00135A44 /* RootCoordinator.swift */,
+				0F3028D6263D154F00135A44 /* Coordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		0F3028DA263D15A900135A44 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				0F3028DB263D15A900135A44 /* APIImplementation.swift */,
+				0F3028DC263D15A900135A44 /* APIDefinition.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		0F3028DF263D15B300135A44 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				0F3028E0263D15B300135A44 /* NetworkManager.swift */,
+				0F302919263D25DB00135A44 /* Configuration.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		0F3028E4263D15E900135A44 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				0F3028E5263D15E900135A44 /* NetworkDefinition.swift */,
+				0F3028E6263D15E900135A44 /* Identifiable.swift */,
+				0F302925263D450400135A44 /* BaseView.swift */,
+				0F302927263D475700135A44 /* CatListCellView.swift */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		0F3028EB263D160900135A44 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				0F302921263D276A00135A44 /* UIViewController+Extension.swift */,
+				0F3028EC263D160900135A44 /* UIView+Extension.swift */,
+				0F3028ED263D160900135A44 /* UITableView+Extension.swift */,
+				0F302932263DA69600135A44 /* UICollectionView+Extension.swift */,
+				0F30293A263E796D00135A44 /* Data+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		0F3028F5263D172F00135A44 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0F3028F6263D173B00135A44 /* Favorite.swift */,
+				0F3028F8263D17A700135A44 /* Breed.swift */,
+				0F3028FA263D17F600135A44 /* Cat.swift */,
+				0F3028FE263D21F600135A44 /* UploadCatResponse.swift */,
+				0F302900263D22B300135A44 /* FavoriteCatResponse.swift */,
+				0F302902263D232800135A44 /* UnFavoriteCatResponse.swift */,
+				0F302929263D479000135A44 /* CatListCellModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0F302904263D243900135A44 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0F30292B263D480D00135A44 /* Cell */,
+				0F30290C263D246600135A44 /* Upload */,
+				0F30290B263D245F00135A44 /* Cat */,
+				0F30290A263D245A00135A44 /* Favorite */,
+				0F302915263D248C00135A44 /* HomeViewController.swift */,
+				0F302916263D248C00135A44 /* HomeViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0F302905263D244000135A44 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0F30291B263D260000135A44 /* CatViewModel.swift */,
+				0F30291D263D260B00135A44 /* FavoriteViewModel.swift */,
+				0F30291F263D262500135A44 /* UploadViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0F30290A263D245A00135A44 /* Favorite */ = {
+			isa = PBXGroup;
+			children = (
+				0F302906263D245000135A44 /* FavoriteCatViewController.swift */,
+				0F302907263D245000135A44 /* FavoriteCatViewController.xib */,
+			);
+			path = Favorite;
+			sourceTree = "<group>";
+		};
+		0F30290B263D245F00135A44 /* Cat */ = {
+			isa = PBXGroup;
+			children = (
+				0F30290D263D247700135A44 /* CatViewController.swift */,
+				0F30290E263D247700135A44 /* CatViewController.xib */,
+				0F30293C263E7DC400135A44 /* CatDetailViewController.swift */,
+				0F30293D263E7DC400135A44 /* CatDetailViewController.xib */,
+			);
+			path = Cat;
+			sourceTree = "<group>";
+		};
+		0F30290C263D246600135A44 /* Upload */ = {
+			isa = PBXGroup;
+			children = (
+				0F302911263D248200135A44 /* UploadCatViewController.swift */,
+				0F302912263D248200135A44 /* UploadCatViewController.xib */,
+			);
+			path = Upload;
+			sourceTree = "<group>";
+		};
+		0F30292B263D480D00135A44 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0F30292C263D482300135A44 /* CatListTableViewCell.swift */,
+				0F30292D263D482300135A44 /* CatListTableViewCell.xib */,
+				0F302936263DADEB00135A44 /* CatCollectionViewCell.swift */,
+				0F302937263DADEB00135A44 /* CatCollectionViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +297,10 @@
 			dependencies = (
 			);
 			name = TheCatIKnow;
+			packageProductDependencies = (
+				0F3028F1263D164F00135A44 /* SDWebImage */,
+				0F3028F3263D164F00135A44 /* SDWebImageMapKit */,
+			);
 			productName = TheCatIKnow;
 			productReference = 0F3028BC263D14C900135A44 /* TheCatIKnow.app */;
 			productType = "com.apple.product-type.application";
@@ -110,6 +328,9 @@
 				Base,
 			);
 			mainGroup = 0F3028B3263D14C900135A44;
+			packageReferences = (
+				0F3028F0263D164F00135A44 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = 0F3028BD263D14C900135A44 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -124,9 +345,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F302914263D248200135A44 /* UploadCatViewController.xib in Resources */,
+				0F302939263DADEB00135A44 /* CatCollectionViewCell.xib in Resources */,
+				0F30293F263E7DC400135A44 /* CatDetailViewController.xib in Resources */,
+				0F302909263D245000135A44 /* FavoriteCatViewController.xib in Resources */,
+				0F302910263D247700135A44 /* CatViewController.xib in Resources */,
 				0F3028CC263D14CA00135A44 /* LaunchScreen.storyboard in Resources */,
 				0F3028C9263D14CA00135A44 /* Assets.xcassets in Resources */,
-				0F3028C7263D14C900135A44 /* Main.storyboard in Resources */,
+				0F302918263D248C00135A44 /* HomeViewController.xib in Resources */,
+				0F30292F263D482300135A44 /* CatListTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,23 +364,47 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F3028C4263D14C900135A44 /* ViewController.swift in Sources */,
+				0F302926263D450400135A44 /* BaseView.swift in Sources */,
+				0F30293B263E796D00135A44 /* Data+Extension.swift in Sources */,
+				0F302922263D276A00135A44 /* UIViewController+Extension.swift in Sources */,
+				0F3028EE263D160900135A44 /* UIView+Extension.swift in Sources */,
+				0F302901263D22B300135A44 /* FavoriteCatResponse.swift in Sources */,
+				0F302908263D245000135A44 /* FavoriteCatViewController.swift in Sources */,
+				0F3028D8263D154F00135A44 /* RootCoordinator.swift in Sources */,
+				0F3028FB263D17F600135A44 /* Cat.swift in Sources */,
+				0F3028F7263D173B00135A44 /* Favorite.swift in Sources */,
+				0F3028D7263D154F00135A44 /* AppCoordinator.swift in Sources */,
+				0F302917263D248C00135A44 /* HomeViewController.swift in Sources */,
+				0F30291E263D260B00135A44 /* FavoriteViewModel.swift in Sources */,
+				0F30293E263E7DC400135A44 /* CatDetailViewController.swift in Sources */,
+				0F302933263DA69600135A44 /* UICollectionView+Extension.swift in Sources */,
+				0F3028FD263D19CA00135A44 /* Constants.swift in Sources */,
+				0F30292E263D482300135A44 /* CatListTableViewCell.swift in Sources */,
+				0F3028D9263D154F00135A44 /* Coordinator.swift in Sources */,
+				0F3028E2263D15B300135A44 /* NetworkManager.swift in Sources */,
+				0F3028DE263D15A900135A44 /* APIDefinition.swift in Sources */,
+				0F30292A263D479000135A44 /* CatListCellModel.swift in Sources */,
+				0F3028F9263D17A700135A44 /* Breed.swift in Sources */,
+				0F3028DD263D15A900135A44 /* APIImplementation.swift in Sources */,
+				0F30290F263D247700135A44 /* CatViewController.swift in Sources */,
+				0F302913263D248200135A44 /* UploadCatViewController.swift in Sources */,
+				0F302928263D475700135A44 /* CatListCellView.swift in Sources */,
+				0F302903263D232800135A44 /* UnFavoriteCatResponse.swift in Sources */,
+				0F302938263DADEB00135A44 /* CatCollectionViewCell.swift in Sources */,
+				0F30291C263D260000135A44 /* CatViewModel.swift in Sources */,
+				0F3028E9263D15E900135A44 /* Identifiable.swift in Sources */,
 				0F3028C0263D14C900135A44 /* AppDelegate.swift in Sources */,
-				0F3028C2263D14C900135A44 /* SceneDelegate.swift in Sources */,
+				0F302920263D262500135A44 /* UploadViewModel.swift in Sources */,
+				0F3028E8263D15E900135A44 /* NetworkDefinition.swift in Sources */,
+				0F30291A263D25DB00135A44 /* Configuration.swift in Sources */,
+				0F3028FF263D21F600135A44 /* UploadCatResponse.swift in Sources */,
+				0F3028EF263D160900135A44 /* UITableView+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		0F3028C5263D14C900135A44 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0F3028C6263D14C900135A44 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		0F3028CA263D14CA00135A44 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -287,7 +538,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = E82Z46N6KL;
 				INFOPLIST_FILE = TheCatIKnow/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -295,7 +548,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.letrongtriet.TheCatIKnow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -305,7 +558,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = E82Z46N6KL;
 				INFOPLIST_FILE = TheCatIKnow/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -313,7 +568,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.letrongtriet.TheCatIKnow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -339,6 +594,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0F3028F0263D164F00135A44 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.11.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0F3028F1263D164F00135A44 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0F3028F0263D164F00135A44 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		0F3028F3263D164F00135A44 /* SDWebImageMapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0F3028F0263D164F00135A44 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImageMapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0F3028B4263D14C900135A44 /* Project object */;
 }

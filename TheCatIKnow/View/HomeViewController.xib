@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="TheCatIKnow" customModuleProvider="target">
+            <connections>
+                <outlet property="catsView" destination="t6O-Ee-Urm" id="dNd-l0-3bD"/>
+                <outlet property="favoritesView" destination="T4L-eG-pVk" id="C0e-fm-Kut"/>
+                <outlet property="scrollView" destination="6Qh-de-dgn" id="3j3-zU-m9C"/>
+                <outlet property="uploadsView" destination="LeG-XV-M6R" id="gCC-DM-UJc"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="pcn-2Y-65a">
+                    <rect key="frame" x="20" y="44" width="374" height="32"/>
+                    <segments>
+                        <segment title="Cats"/>
+                        <segment title="Favorites"/>
+                        <segment title="Uploads"/>
+                    </segments>
+                    <connections>
+                        <action selector="userDidChooseAnotherSection:" destination="-1" eventType="valueChanged" id="UhK-hb-Ljg"/>
+                    </connections>
+                </segmentedControl>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zp5-UH-fd2" userLabel="ContainerView">
+                    <rect key="frame" x="0.0" y="75" width="414" height="787"/>
+                    <subviews>
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Qh-de-dgn">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="787"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="RgZ-sQ-I6J">
+                                    <rect key="frame" x="0.0" y="0.0" width="1242" height="787"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t6O-Ee-Urm" userLabel="Cats">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="787"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T4L-eG-pVk" userLabel="Favorites">
+                                            <rect key="frame" x="414" y="0.0" width="414" height="787"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LeG-XV-M6R" userLabel="Uploads">
+                                            <rect key="frame" x="828" y="0.0" width="414" height="787"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        </view>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="RgZ-sQ-I6J" secondAttribute="trailing" id="1da-AD-SIH"/>
+                                <constraint firstItem="RgZ-sQ-I6J" firstAttribute="height" secondItem="6Qh-de-dgn" secondAttribute="height" id="FHQ-xX-hhR"/>
+                                <constraint firstItem="RgZ-sQ-I6J" firstAttribute="leading" secondItem="6Qh-de-dgn" secondAttribute="leading" id="RgB-xp-cQY"/>
+                                <constraint firstAttribute="bottom" secondItem="RgZ-sQ-I6J" secondAttribute="bottom" id="RrI-vi-VVU"/>
+                                <constraint firstItem="RgZ-sQ-I6J" firstAttribute="top" secondItem="6Qh-de-dgn" secondAttribute="top" id="ob8-6i-A8I"/>
+                            </constraints>
+                        </scrollView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="6Qh-de-dgn" firstAttribute="top" secondItem="Zp5-UH-fd2" secondAttribute="top" id="1ko-Lk-CrX"/>
+                        <constraint firstItem="T4L-eG-pVk" firstAttribute="height" secondItem="Zp5-UH-fd2" secondAttribute="height" id="6b4-E3-8fb"/>
+                        <constraint firstAttribute="bottom" secondItem="6Qh-de-dgn" secondAttribute="bottom" id="7Vb-Go-opA"/>
+                        <constraint firstItem="T4L-eG-pVk" firstAttribute="width" secondItem="Zp5-UH-fd2" secondAttribute="width" id="AKu-wi-dX9"/>
+                        <constraint firstItem="6Qh-de-dgn" firstAttribute="leading" secondItem="Zp5-UH-fd2" secondAttribute="leading" id="BN0-Lz-N3a"/>
+                        <constraint firstAttribute="trailing" secondItem="6Qh-de-dgn" secondAttribute="trailing" id="Dcz-Rn-3u9"/>
+                        <constraint firstItem="t6O-Ee-Urm" firstAttribute="height" secondItem="Zp5-UH-fd2" secondAttribute="height" id="KMK-xP-6q8"/>
+                        <constraint firstItem="LeG-XV-M6R" firstAttribute="height" secondItem="Zp5-UH-fd2" secondAttribute="height" id="VTd-Uc-KGE"/>
+                        <constraint firstItem="LeG-XV-M6R" firstAttribute="width" secondItem="Zp5-UH-fd2" secondAttribute="width" id="Z5F-UP-yUP"/>
+                        <constraint firstItem="t6O-Ee-Urm" firstAttribute="width" secondItem="Zp5-UH-fd2" secondAttribute="width" id="wjZ-ZF-76c"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="pcn-2Y-65a" secondAttribute="trailing" constant="20" id="4Hz-57-Vej"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Zp5-UH-fd2" secondAttribute="trailing" id="DKj-dz-3TQ"/>
+                <constraint firstItem="pcn-2Y-65a" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="JSq-17-PQJ"/>
+                <constraint firstItem="pcn-2Y-65a" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="PNe-Ch-2Bs"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Zp5-UH-fd2" secondAttribute="bottom" id="Qzk-ed-H4t"/>
+                <constraint firstItem="Zp5-UH-fd2" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="hcs-Dj-AfG"/>
+                <constraint firstItem="Zp5-UH-fd2" firstAttribute="top" secondItem="pcn-2Y-65a" secondAttribute="bottom" id="u2L-U3-n9f"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="153.34821428571428"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
